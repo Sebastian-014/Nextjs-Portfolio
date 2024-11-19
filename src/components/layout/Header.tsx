@@ -16,28 +16,29 @@ const Header = () => {
   return (
     <>
       <Wrapper>
-        <header className="flex justify-between pt-8 py-2 fixed top-0 left-0 w-full bg-neutral-800 z-10">
+        <header className="pt-8 py-2 fixed top-0 left-0 w-full bg-neutral-800 z-10">
 
+          <div className="flex justify-between mx-6 md:mx-10">
+            <div>
+              <h2 className=" text-3xl md:text-4xl font-bold text-gray-200">Portfolio.</h2>
+            </div>
 
-          <div>
-            <h2 className=" text-3xl md:text-4xl font-bold text-gray-100 ml-10">Portfolio.</h2>
-          </div>
+            {/* Navbar Links */}
 
-          {/* Navbar Links */}
+            <div>
+              <ul className=" hidden md:flex md:space-x-16 lg:space-x-24 md:font-semibold">
+                <Link href="/"><li className=" text-gray-200 hover:underline hover:text-purple-500 duration-500">Home</li></ Link>
+                <Link href="/about"><li className=" text-gray-200 hover:underline hover:text-purple-500 duration-500">About</li></ Link>
+                <Link href="/skills"><li className=" text-gray-200 hover:underline hover:text-purple-500 duration-500">Skills</li></ Link>
+                <Link href="/contact"><li className=" text-gray-200 hover:underline hover:text-purple-500 duration-500">Contact</li></ Link>
+              </ul>
 
-          <div>
-            <ul className=" hidden md:flex md:space-x-16 lg:space-x-28 md:font-semibold lg:ml-80 lg:-mr-44">
-              <Link href="/"><li className=" text-gray-200 hover:underline hover:text-purple-500 duration-500">Home</li></ Link>
-              <Link href="/about"><li className=" text-gray-200 hover:underline hover:text-purple-500 duration-500">About</li></ Link>
-              <Link href="/skills"><li className=" text-gray-200 hover:underline hover:text-purple-500 duration-500">Skills</li></ Link>
-              <Link href="/contact"><li className=" text-gray-200 hover:underline hover:text-purple-500 duration-500">Contact</li></ Link>
-            </ul>
+              {/* Mobile Nav Hamburger */}
 
-            {/* Mobile Nav Hamburger */}
+              <div onClick={handleNav} className="md:hidden">
+                <AiOutlineMenu color="white" size="20" className="mr-4" />
 
-            <div onClick={handleNav} className="md:hidden">
-              <AiOutlineMenu color="white" size="20" className="ml-20" />
-
+              </div>
             </div>
           </div>
 
